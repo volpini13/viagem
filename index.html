@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Viagem</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+
+    <h1>Calculadora de Viagem</h1>
+    
+    <label for="estadoPartida">Selecione o estado de partida:</label>
+    <select id="estadoPartida" onchange="validarEstados()">
+        <option value="São Paulo">São Paulo</option>
+        <option value="Bahia">Bahia</option>
+        <option value="Minas Gerais">Minas Gerais</option>
+        <option value="Rio de Janeiro">Rio de Janeiro</option>
+        <option value="Paraná">Paraná</option>
+        <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+        <option value="Santa Catarina">Santa Catarina</option>
+        <option value="Ceará">Ceará</option>
+        <option value="Pernambuco">Pernambuco</option>
+        <option value="Sergipe">Sergipe</option>
+        <option value="Espírito Santo">Espírito Santo</option>
+        <option value="Tocantins">Tocantins</option>
+        <option value="Mato Grosso">Mato Grosso</option>
+        <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+        <option value="Acre">Acre</option>
+        <option value="Amapá">Amapá</option>
+        <option value="Amazonas">Amazonas</option>
+        <option value="Pará">Pará</option>
+        <option value="Rondônia">Rondônia</option>
+        <option value="Roraima">Roraima</option>
+    </select>
+    
+    <label for="estadoDestino">Selecione o estado de destino:</label>
+    <select id="estadoDestino" onchange="validarEstados()">
+        <option value="São Paulo">São Paulo</option>
+        <option value="Bahia">Bahia</option>
+        <option value="Minas Gerais">Minas Gerais</option>
+        <option value="Rio de Janeiro">Rio de Janeiro</option>
+        <option value="Paraná">Paraná</option>
+        <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+        <option value="Santa Catarina">Santa Catarina</option>
+        <option value="Ceará">Ceará</option>
+        <option value="Pernambuco">Pernambuco</option>
+        <option value="Sergipe">Sergipe</option>
+        <option value="Espírito Santo">Espírito Santo</option>
+        <option value="Tocantins">Tocantins</option>
+        <option value="Mato Grosso">Mato Grosso</option>
+        <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+        <option value="Acre">Acre</option>
+        <option value="Amapá">Amapá</option>
+        <option value="Amazonas">Amazonas</option>
+        <option value="Pará">Pará</option>
+        <option value="Rondônia">Rondônia</option>
+        <option value="Roraima">Roraima</option>
+    </select>
+    
+    <label for="transporte">Escolha o transporte:</label>
+    <select id="transporte">
+        <option value="aviao">Avião</option>
+        <option value="onibus">Ônibus</option>
+    </select>
+
+    <label for="precoAviao">Preço por km para avião (R$):</label>
+    <input type="number" id="precoAviao" value="0.5" step="0.01">
+
+    <label for="precoOnibus">Preço por km para ônibus (R$):</label>
+    <input type="number" id="precoOnibus" value="0.2" step="0.01">
+
+    <button onclick="calcular()">Calcular Custo</button>
+    <button onclick="limpar()">Limpar</button>
+    
+    <h2>Resultado:</h2>
+    <textarea id="result" rows="8" readonly></textarea>
+
+    <script src="app.js"></script>
+</body>
+</html>

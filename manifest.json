@@ -1,0 +1,12 @@
+{
+    "name": "Calculadora de Viagem",
+    "start_url": "/viagem",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "img/br.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
